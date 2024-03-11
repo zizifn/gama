@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgama=self.webpackChunkgama||[]).push([[5316],{4948:a=>{a.exports=JSON.parse('{"permalink":"/gama/blog/tags/facebook","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
