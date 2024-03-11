@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgama=self.webpackChunkgama||[]).push([[4246],{709:a=>{a.exports=JSON.parse('{"label":"facebook","permalink":"/gama/blog/tags/facebook","allTagsPath":"/gama/blog/tags","count":1,"unlisted":false}')}}]);

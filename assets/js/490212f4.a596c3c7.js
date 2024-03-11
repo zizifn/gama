@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgama=self.webpackChunkgama||[]).push([[4251],{6453:a=>{a.exports=JSON.parse('{"permalink":"/gama/blog/tags/docusaurus","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
