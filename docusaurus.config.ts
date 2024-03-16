@@ -94,9 +94,9 @@ const config: Config = {
           position: "left",
           label: "Setup",
         },
-        { to: "/blog", label: "Blog", position: "left" },
+        // { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/zizifn/gama",
           label: "GitHub",
           position: "right",
         },
