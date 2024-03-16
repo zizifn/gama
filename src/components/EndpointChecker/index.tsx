@@ -10,15 +10,14 @@ export function CheckAvailability({
   endpoint: string;
 }): JSX.Element {
   const [checkStatus, setCheckStatus] = useState("Check");
-
   async function checkAPIAvailability() {
-    console.log("checkAPIAvailability");
-    setCheckStatus("Checking...");
     const apikey = window.localStorage.getItem("apiKey");
     if (!apikey) {
       alert("Please save your API Key first");
       return;
     }
+    console.log("checkAPIAvailability");
+    setCheckStatus("Checking...");
 
     try {
       const resp = await fetch(`${endpoint}/v1/chat/completions`, {
