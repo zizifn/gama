@@ -1,0 +1,67 @@
+
+
+# 环境信息和检查
+import { SaveAPIKey, CheckAvailability } from '@site/src/components/EndpointChecker';
+
+
+## OpenAI Models
+
+### Chat.Completions Models:
+
+```
+gpt-3.5-turbo
+```
+```
+gpt-4-turbo-preview
+```
+```
+gpt-4-vision-preview
+```
+### Embeddings Models:
+
+```
+text-embedding-ada-002
+```
+```
+text-embedding-3-small
+```
+```
+text-embedding-3-large
+```
+### Image Models:
+### Audio Models:
+
+## API endpoints
+
+OpenAI 的服务是通过 https://www.ohmygpt.com/ 提供.
+
+### API Key
+<SaveAPIKey></SaveAPIKey>
+
+### Endpoints
+
+#### 优质线路1 (无可用性保证)
+<CheckAvailability endpoint={'https://aigptx.top/'}></CheckAvailability>
+```
+https://aigptx.top/
+
+```
+#### 优质线路2 (无可用性保证)
+<CheckAvailability endpoint={'https://cn2us02.opapi.win/'}></CheckAvailability>
+```
+https://cn2us02.opapi.win/
+```
+
+#### CloudFlare Worker
+<CheckAvailability endpoint={'https://cfwus02.opapi.win/'}></CheckAvailability>
+```
+https://cfwus02.opapi.win/
+```
+
+#### CloudFlare CDN 
+<CheckAvailability endpoint={'https://apic.ohmygpt.com/'}></CheckAvailability>
+```
+https://apic.ohmygpt.com/
+```
+
+
