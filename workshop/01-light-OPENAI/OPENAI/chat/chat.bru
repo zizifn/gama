@@ -1,0 +1,27 @@
+meta {
+  name: chat
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://aigptx.top/v1/chat/completions
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{KEY}}
+}
+
+body:json {
+  {
+    "model": "gpt-3.5-turbo",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello!"
+      }
+    ]
+  }
+}
