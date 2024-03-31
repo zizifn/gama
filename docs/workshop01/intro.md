@@ -41,3 +41,9 @@ https://github.com/f/awesome-chatgpt-prompts
 https://github.com/ai-boost/awesome-prompts
 
 ## Function-calling
+
+## Function-calling
+
+## Embeddings
+
+## Image generation

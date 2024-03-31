@@ -1,0 +1,20 @@
+meta {
+  name: image
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://api.openai.com/v1/chat/completions
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{KEY}}
+}
+
+body:json {
+  { "model": "gpt-4-vision-preview", "messages": [ { "role": "user", "content": [ { "type": "text", "text": "What’s in this image?" }, { "type": "image_url", "image_url": { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Gfp-wisconsin-madison-the-nature-boardwalk.jpg/2560px-Gfp-wisconsin-madison-the-nature-boardwalk.jpg" } } ] } ], "max_tokens": 300 }
+}

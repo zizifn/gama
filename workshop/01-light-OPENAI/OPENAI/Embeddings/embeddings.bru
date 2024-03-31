@@ -1,0 +1,23 @@
+meta {
+  name: embeddings
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://aigptx.top/v1/embeddings
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{KEY}}
+}
+
+body:json {
+  {
+    "input": "Your text string goes here",
+    "model": "text-embedding-3-small"
+  }
+}

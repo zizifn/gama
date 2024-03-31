@@ -2,12 +2,6 @@
 sidebar_position: 1
 ---
 
-# Workshop Intro
+# Workshop timeline
 
-这是 GAMA 的 Workshop Intro
-
-## Getting Started
-
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+![timeline](./gama-timeline1.excalidraw.png)
