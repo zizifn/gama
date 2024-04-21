@@ -1,0 +1,26 @@
+meta {
+  name: speech2text
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://aigptx.top/v1/audio/transcriptions
+  body: multipartForm
+  auth: bearer
+}
+
+headers {
+  Content-Type: multipart/form-data
+}
+
+auth:bearer {
+  token: {{KEY}}
+}
+
+body:multipart-form {
+  model: whisper-1
+  file: @file(C:\Users\zizifn\Downloads\alloy.wav)
+  response_format: verbose_json
+  ~language: en
+}

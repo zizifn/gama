@@ -3,8 +3,8 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "Program Gama",
-  tagline: "Generative-AI Moving Ahead",
+  title: "Program AI",
+  tagline: "Workshop on AI",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -76,7 +76,7 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "Program Gama",
+      title: "Program AI",
       logo: {
         alt: "My Site Logo",
         src: "img/logo.svg",

@@ -1,0 +1,89 @@
+meta {
+  name: fun-call
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://aigptx.top/v1/chat/completions
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{KEY}}
+}
+
+body:json {
+  {
+    "model": "gpt-3.5-turbo",
+      "response_format": { "type": "json_object" },
+    "messages": [
+      {
+        "role": "user",
+        "content": "What's the weather like in San Francisco, Tokyo? Response in JSON."
+      },
+       {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_KEPc8qEjp7wKlJSOEHKMMxKK",
+              "type": "function",
+              "function": {
+                "name": "get_current_weather",
+                "arguments": "{\"location\": \"San Francisco\", \"unit\": \"celsius\"}"
+              }
+            },
+            {
+              "id": "call_zf83ltmxn0YqVrqfi3xZC86P",
+              "type": "function",
+              "function": {
+                "name": "get_current_weather",
+                "arguments": "{\"location\": \"Tokyo\", \"unit\": \"celsius\"}"
+              }
+            }
+          ]
+        },
+          {
+          "tool_call_id": "call_KEPc8qEjp7wKlJSOEHKMMxKK",
+          "role": "tool",
+          "name": "get_current_weather",
+          "content": "31"
+        },    {
+          "tool_call_id": "call_zf83ltmxn0YqVrqfi3xZC86P",
+          "role": "tool",
+          "name": "get_current_weather",
+          "content": "32"
+        }
+    ],
+    "tools": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_current_weather",
+          "description": "Get the current weather in a given location",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "location": {
+                "type": "string",
+                "description": "The city and state, e.g. San Francisco, CA"
+              },
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "celsius",
+                  "fahrenheit"
+                ]
+              }
+            },
+            "required": [
+              "location"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

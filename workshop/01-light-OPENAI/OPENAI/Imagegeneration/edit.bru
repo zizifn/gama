@@ -1,0 +1,22 @@
+meta {
+  name: edit
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://aigptx.top/v1/images/edits
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{KEY}}
+}
+
+body:multipart-form {
+  model: dall-e-2
+  prompt: Visualize a Siamese cat, predominantly white in color. It has striking blue eyes that glisten with curiosity. It has a short, sleek coat, highlighting its lean and athletic build. It's sitting in a relaxed posture, gracefully draped over a soft yellow  cushion. Around it, drape the serene ambiance of a cozy home, enhanced by soft warm lights.
+  image: @file(C:\Users\zizifn\Downloads\original.png)
+  mask: @file(C:\Users\zizifn\Downloads\mask.png)
+}

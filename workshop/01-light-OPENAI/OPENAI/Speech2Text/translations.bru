@@ -1,0 +1,26 @@
+meta {
+  name: translations
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://aigptx.top/v1/audio/translations
+  body: multipartForm
+  auth: bearer
+}
+
+headers {
+  Authorization: Bearer $OPENAI_API_KEY
+  Content-Type: multipart/form-data
+}
+
+auth:bearer {
+  token: {{KEY}}
+}
+
+body:multipart-form {
+  model: whisper-1
+  response_format: json
+  file: @file(C:\Users\zizifn\Documents\response.mpga)
+}

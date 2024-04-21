@@ -1,0 +1,25 @@
+meta {
+  name: variation
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://aigptx.top/v1/images/variations
+  body: multipartForm
+  auth: bearer
+}
+
+headers {
+  Authorization: Bearer $OPENAI_API_KEY
+}
+
+auth:bearer {
+  token: {{KEY}}
+}
+
+body:multipart-form {
+  image: @file(C:\Users\zizifn\Pictures\cat.png)
+  model: dall-e-2
+  n: 2
+}

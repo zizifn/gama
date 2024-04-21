@@ -17,10 +17,18 @@ auth:bearer {
 body:json {
   {
     "model": "gpt-3.5-turbo",
+    "logprobs": true,
+    "response_format": {
+      "type": "json_object"
+    },
     "messages": [
       {
+        "role": "system",
+        "content": " output JSON."
+      },
+      {
         "role": "user",
-        "content": "Hello!"
+        "content": "please fill below sentence, ```I want to```"
       }
     ]
   }
