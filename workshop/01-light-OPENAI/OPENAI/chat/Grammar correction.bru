@@ -1,7 +1,7 @@
 meta {
   name: Grammar correction
   type: http
-  seq: 2
+  seq: 3
 }
 
 post {
@@ -21,10 +21,11 @@ auth:bearer {
 body:json {
   {
     "model": "gpt-3.5-turbo",
+    "response_format": { "type": "json_object" },
     "messages": [
       {
         "role": "system",
-        "content": "You will be provided with statements, and your task is to convert them to standard English."
+        "content": "You will be provided with statements, and your task is to convert them to standard English. output JSON."
       },
       {
         "role": "user",

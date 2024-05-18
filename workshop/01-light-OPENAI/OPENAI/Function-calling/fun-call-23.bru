@@ -1,0 +1,79 @@
+meta {
+  name: fun-call-23
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://aigptx.top/v1/chat/completions
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{KEY}}
+}
+
+body:json {
+  {
+    "model": "gpt-3.5-turbo",
+  
+    "messages": [
+      {
+        "role": "user",
+        "content": "What's the weather like in beijing? If beijing temperature greater than 30 celsius, buy 3 tickets go to there. "
+      }
+    ],
+    "tools": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_current_weather",
+          "description": "Get the current weather in a given location",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "location": {
+                "type": "string",
+                "description": "The city and state, e.g. San Francisco, CA"
+              },
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "celsius",
+                  "fahrenheit"
+                ]
+              }
+            },
+            "required": [
+              "location"
+            ]
+          }
+        }
+      },
+          {
+        "type": "function",
+        "function": {
+          "name": "12306",
+          "description": "Railway ticket sales and reservation system",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "destination": {
+                "type": "string",
+                "description": "The railway station for destination, e.g. shanghai"
+              },
+              "qty": {
+                "type": "number",
+                "description": "The qty for railway ticket, e.g. 1"
+              }
+            },
+            "required": [
+              "destination"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 meta {
-  name: chat
+  name: chat with logprobs
   type: http
-  seq: 1
+  seq: 2
 }
 
 post {
@@ -18,8 +18,14 @@ body:json {
   {
     "model": "gpt-3.5-turbo",
     "logprobs": true,
-    "temperature": 0.1,
+    "response_format": {
+      "type": "json_object"
+    },
     "messages": [
+      {
+        "role": "system",
+        "content": " output JSON."
+      },
       {
         "role": "user",
         "content": "please fill below sentence, ```I want to```"

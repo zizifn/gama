@@ -22,9 +22,61 @@ body:json {
       {
         "role": "user",
         "content": "What's the weather like in San Francisco, beijing? If beijing temperature greater than 30 celsius, buy 3 tickets go to there. "
-      }
+      },
+      {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_MKVpufWZebzCALN35SOjxZz6",
+              "type": "function",
+              "function": {
+                "name": "get_current_weather",
+                "arguments": "{\"location\": \"San Francisco\", \"unit\": \"celsius\"}"
+              }
+            },
+            {
+              "id": "call_tFoLZeNZTeudY0DOMi9Wyy5U",
+              "type": "function",
+              "function": {
+                "name": "get_current_weather",
+                "arguments": "{\"location\": \"Beijing\", \"unit\": \"celsius\"}"
+              }
+            }
+          ]
+        },
+      {
+          "tool_call_id": "call_MKVpufWZebzCALN35SOjxZz6",
+          "role": "tool",
+          "name": "get_current_weather",
+          "content": "31"
+        },    {
+          "tool_call_id": "call_tFoLZeNZTeudY0DOMi9Wyy5U",
+          "role": "tool",
+          "name": "get_current_weather",
+          "content": "36"
+        },
+      {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_LgcqykqqjqtCCpRud83F3JKe",
+              "type": "function",
+              "function": {
+                "name": "12306",
+                "arguments": "{\"destination\":\"beijing\",\"qty\":3}"
+              }
+            }
+          ]
+        },
+  {
+          "tool_call_id": "call_LgcqykqqjqtCCpRud83F3JKe",
+          "role": "tool",
+          "name": "12306",
+          "content": "orderid is 5689276464"
+        }
     ],
-    "tool_choice":"none",
     "tools": [
       {
         "type": "function",

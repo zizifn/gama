@@ -17,18 +17,17 @@ auth:bearer {
 body:json {
   {
     "model": "gpt-3.5-turbo",
-      "response_format": { "type": "json_object" },
     "messages": [
       {
         "role": "user",
-        "content": "What's the weather like in San Francisco, Tokyo? Response in JSON."
+        "content": "What's the weather like in San Francisco, Tokyo?."
       },
-       {
+      {
           "role": "assistant",
           "content": null,
           "tool_calls": [
             {
-              "id": "call_KEPc8qEjp7wKlJSOEHKMMxKK",
+              "id": "call_WOCjwv7Ty34z1UiU513pS4F6",
               "type": "function",
               "function": {
                 "name": "get_current_weather",
@@ -36,7 +35,7 @@ body:json {
               }
             },
             {
-              "id": "call_zf83ltmxn0YqVrqfi3xZC86P",
+              "id": "call_qyIqX5prKLyQ4YabY8B26SUD",
               "type": "function",
               "function": {
                 "name": "get_current_weather",
@@ -45,17 +44,18 @@ body:json {
             }
           ]
         },
-          {
-          "tool_call_id": "call_KEPc8qEjp7wKlJSOEHKMMxKK",
+  {
+          "tool_call_id": "call_WOCjwv7Ty34z1UiU513pS4F6",
           "role": "tool",
           "name": "get_current_weather",
           "content": "31"
         },    {
-          "tool_call_id": "call_zf83ltmxn0YqVrqfi3xZC86P",
+          "tool_call_id": "call_qyIqX5prKLyQ4YabY8B26SUD",
           "role": "tool",
           "name": "get_current_weather",
-          "content": "32"
+          "content": "36"
         }
+  
     ],
     "tools": [
       {
