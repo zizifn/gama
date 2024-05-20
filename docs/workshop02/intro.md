@@ -2,6 +2,10 @@
 sidebar_position: 1
 ---
 
+## langchain
+
+https://js.langchain.com/v0.2/docs/integrations/platforms/
+
 ## vectorstores
 
 https://js.langchain.com/v0.1/docs/integrations/vectorstores/lancedb/

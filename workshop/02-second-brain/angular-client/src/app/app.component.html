@@ -1,5 +1,60 @@
-<h1 class="text-3xl font-bold underline">
-  {{title}}
-</h1>
+<div class="relative w-full max-w-lg transform px-4 transition-all opacity-100 
+  scale-100 flex flex-col  justify-items-center justify-center gap-3" style="">
+  <div class="bg-white shadow sm:rounded-lg">
+    <div class="px-4 py-5 sm:p-6">
+      <h3 class="text-base font-semibold leading-6 text-gray-900">Index</h3>
+      <div class="mt-2 max-w-xl text-sm text-gray-500">
+        <p>Index website for your second brain</p>
+      </div>
+      <form class="mt-5 sm:flex sm:items-center" (submit)="index($event)">
+        <div class="w-full sm:max-w-xs">
+          <label for="url" class="sr-only">Email</label>
+          <input type="url" name="url" id="url"
+            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            placeholder="https://">
+        </div>
+        <button type="submit"
+          class="mt-3 inline-flex w-full items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:ml-3 sm:mt-0 sm:w-auto">Index</button>
+      </form>
+    </div>
+  </div>
+  <div class="bg-white shadow sm:rounded-lg">
+    <div class="px-4 py-5 sm:p-6">
+      <h3 class="text-base font-semibold leading-6 text-gray-900">Search</h3>
+      <div class="mt-2 max-w-xl text-sm text-gray-500">
+        <p>Search from second brain </p>
+      </div>
+      <form class="mt-5 sm:flex sm:items-center" (submit)="search($event)">
+        <div class="w-full sm:max-w-xs">
+          <label for="search" class="sr-only">Search</label>
+          <input type="text" name="search" id="search"
+            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            placeholder="xxx">
+        </div>
+        <button type="submit"
+          class="mt-3 inline-flex w-full items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:ml-3 sm:mt-0 sm:w-auto">Search</button>
+      </form>
+    </div>
+  </div>
 
-<button (click)="callHelloAPI()">call API</button>
+  <div class="bg-white shadow sm:rounded-lg">
+    <div class="px-4 py-5 sm:p-6">
+      <h3 class="text-base font-semibold leading-6 text-gray-900">Chat</h3>
+      <div class="mt-2 max-w-xl text-sm text-gray-500">
+        <p>Chat with second brain</p>
+      </div>
+      <form class="mt-5 sm:flex sm:items-center" (submit)="chat($event)">
+        <div class="w-full sm:max-w-xs">
+          <label for="chat" class="sr-only">Chat</label>
+          <input type="text" name="chat" id="chat"
+            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            placeholder="xxxx">
+        </div>
+        <button type="submit"
+          class="mt-3 inline-flex w-full items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:ml-3 sm:mt-0 sm:w-auto">Chat</button>
+      </form>
+    </div>
+  </div>
+</div>
+<h2 class="m-3">Result</h2>
+<ngx-json-viewer [json]="data"></ngx-json-viewer>
