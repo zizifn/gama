@@ -1,0 +1,17 @@
+meta {
+  name: add doc
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/api/docs/create
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "webLink": "https://mp.weixin.qq.com/s/V8JkaGEVQyDuPeuTHbS_3A"
+  }
+}

@@ -4,6 +4,8 @@
 # ignore sub directories
 **/node_modules/**/*
 
+**/.env
+
 # Production
 /build
 

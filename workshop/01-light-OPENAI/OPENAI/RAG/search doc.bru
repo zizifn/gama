@@ -1,0 +1,17 @@
+meta {
+  name: search doc
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/api/docs/search
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "search": "张一鸣"
+  }
+}
