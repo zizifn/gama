@@ -1,0 +1,17 @@
+meta {
+  name: chat doc
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/api/chat
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "input": "在35岁之后，是否还能保持18岁的好奇心？ 请用简短的一句话回答。"
+  }
+}
