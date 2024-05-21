@@ -2,13 +2,27 @@
 sidebar_position: 1
 ---
 
+# Second Brain (RAG)
+
+![RAG](./rag.excalidraw.png)
+
 ## langchain
 
 https://js.langchain.com/v0.2/docs/integrations/platforms/
 
 ## vectorstores
 
-https://js.langchain.com/v0.1/docs/integrations/vectorstores/lancedb/
+https://js.langchain.com/v0.1/docs/integrations/vectorstores
+
+### lancedb
+
+https://lancedb.com/
+
+https://github.com/lancedb/vectordb-recipes
+
+### Cosine Similarity
+
+https://newtum.com/calculators/maths/cosine-similarity-calculator
 
 ## load the web page
 

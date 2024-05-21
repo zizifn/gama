@@ -7,7 +7,7 @@ const modelGPT4O = new ChatOpenAI({
     verbose: true,
     configuration: {
         baseURL: "https://aigptx.top/v1",
-    },
+    }
 });
 const questionAnsweringPrompt = ChatPromptTemplate.fromMessages([
     [
