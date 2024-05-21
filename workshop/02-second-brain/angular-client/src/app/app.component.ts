@@ -46,6 +46,7 @@ export class AppComponent {
         webLink: url,
       })
       .subscribe((data) => {
+        this.data = data;
         console.log(data);
       });
     event.preventDefault();
@@ -61,6 +62,7 @@ export class AppComponent {
         input: chat,
       })
       .subscribe((data) => {
+        this.data = data;
         console.log(data);
       });
     event.preventDefault();
