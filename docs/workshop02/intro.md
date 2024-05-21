@@ -6,6 +6,10 @@ sidebar_position: 1
 
 ![RAG](./rag.excalidraw.png)
 
+## GPT4o
+
+https://platform.openai.com/docs/models/gpt-4o
+
 ## langchain
 
 https://js.langchain.com/v0.2/docs/integrations/platforms/
