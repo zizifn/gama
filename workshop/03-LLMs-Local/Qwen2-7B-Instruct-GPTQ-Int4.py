@@ -2,14 +2,11 @@ from modelscope import AutoModelForCausalLM, AutoTokenizer
 device = "cuda" # the device to load the model onto
 
 model = AutoModelForCausalLM.from_pretrained(
-    "qwen/Qwen2-7B-Instruct",
+    "qwen/Qwen2-7B-Instruct-GPTQ-Int4",
     torch_dtype="auto",
-    device_map="auto"
+    device_map="cuda"
 )
-# from accelerate import disk_offload
-# disk_offload(model=model, offload_dir="offload")
-
-tokenizer = AutoTokenizer.from_pretrained("qwen/Qwen2-7B-Instruct")
+tokenizer = AutoTokenizer.from_pretrained("qwen/Qwen2-7B-Instruct-GPTQ-Int4")
 
 prompt = "Give me a short introduction to large language model."
 messages = [

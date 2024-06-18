@@ -4,6 +4,8 @@ sidebar_position: 3
 
 # Running LLMs in Local
 
+> 有个好机器和好网络！
+
 ## Opensource
 
 ### Huggingface
@@ -31,7 +33,7 @@ https://huggingface.co/pricing#spaces
 
 #### Load model from Huggingface
 
-`workshop/03-LLMs-Local/llama-3-8b.py`
+`workshop/03-LLMs-Local/Qwen2-1.5B-Instruct-huggingface.py`
 
 ### Model Scope 魔搭社区
 
@@ -41,6 +43,19 @@ https://community.modelscope.cn/
 #### modelscope libary
 
 https://www.modelscope.cn/docs/Quick%20Start
+
+#### setup
+
+1. check CUDA version
+   `nvidia-smi`
+2. pytorch with CUDA
+   https://pytorch.org/get-started/locally/
+
+#### Load model from Model Scope
+
+`workshop/03-LLMs-Local/Qwen2-1.5B-Instruct.py`
+
+### vllm
 
 ### Ollama
 
