@@ -80,6 +80,10 @@ https://huggingface.co/docs/hub/en/gguf
 
 https://huggingface.co/QuantFactory/Meta-Llama-3-8B-Instruct-GGUF-v2/tree/main
 
+#### load from disk
+
+https://www.markhneedham.com/blog/2023/10/18/ollama-hugging-face-gguf-models/
+
 #### ONNX etc
 
 #### Load model from Huggingface
