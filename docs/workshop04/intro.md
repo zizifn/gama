@@ -4,14 +4,31 @@ sidebar_position: 3
 
 # Fine Tuning LLM
 
+![fine tuning](./fine-tuning.png)
 
-## P-Tuning V2
+## How
 
-P-Tuning v2: Prompt Tuning Can Be Comparable to
-Fine-tuning Universally Across Scales and Tasks,
-2022 https://arxiv.org/pdf/2110.07602.pdf
+![how-3-way](./how-3-way.png)
 
-## Lora原理
+### Self Supervised
+### Supervised
+### Refinforcement Learning
+
+https://towardsdatascience.com/fine-tuning-large-language-models-llms-23473d763b91
+
+### Supervised
+
+![Supervised](./Supervised.png)
+
+![Supervised paramter](./supervised-parameter.png)
+
+### Retrain all parameters
+### Transfer Learning
+只 training 一部分参数
+### Parmeter Efficient Fine Tuning
+不改变原来的参数，加一层？！
+#### Lora
+[知乎|深入浅出Lora](https://zhuanlan.zhihu.com/p/650197598)
 
 ## B站大战弱智吧
 
