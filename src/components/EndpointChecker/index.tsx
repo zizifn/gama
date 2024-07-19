@@ -27,7 +27,7 @@ export function CheckAvailability({
           Authorization: `Bearer ${apikey}`,
         },
         body: JSON.stringify({
-          model: "gpt-3.5-turbo",
+          model: "gpt-4o-mini",
           messages: [
             {
               role: "user",
