@@ -45,11 +45,11 @@ model_dir = snapshot_download('qwen/Qwen2-7B-Instruct', cache_dir='/root/autodl-
 
 ### 运行模型
 
-[!code-python](./runmodel.ipynb)
+./runmodel.ipynb
 
 ### Fine Tuning
 
-[!code-python](./finetune.ipynb)
+./finetune.ipynb
 
 
 
