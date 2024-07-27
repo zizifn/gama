@@ -18,7 +18,7 @@ https://towardsdatascience.com/fine-tuning-large-language-models-llms-23473d763b
 
 ### Supervised
 
-![Supervised](./Supervised.png)
+![Supervised](./supervised.png)
 
 ![Supervised paramter](./supervised-parameter.png)
 

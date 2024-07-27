@@ -16,14 +16,38 @@ auth:bearer {
 
 body:json {
   {
-    "model": "gpt-4o",
-    "logprobs": true,
-    "temperature": 0.1,
     "messages": [
       {
+        "role": "system",
+        "content": [
+          {
+            "type": "text",
+            "text": "you are very good at css, you can use css write image"
+          }
+        ]
+      },
+      {
         "role": "user",
-        "content": "please fill below sentence, ```I want to```"
+        "content": [
+          {
+            "type": "text",
+            "text": "could you use css write below images"
+          },
+          {
+            "type": "image_url",
+            "image_url": {
+              "url": "https://pbs.twimg.com/profile_images/1664340746709737473/31Zk5ywd_400x400.jpg"
+            }
+          }
+        ]
       }
-    ]
+    ],
+    "temperature": 1,
+    "max_tokens": 256,
+    "top_p": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "seed": null,
+    "model": "gpt-4o"
   }
 }
